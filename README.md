@@ -1,38 +1,72 @@
-Role Name
-=========
+# Ansible Role: MySQL Server
 
-A brief description of the role goes here.
+Automates the installation and configuration of MySQL database servers.
 
-Requirements
-------------
+---
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+## 📌 Overview
 
-Role Variables
---------------
+The **mysql_server** role installs and configures a MySQL database service for application environments.
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+It enables automated database server provisioning within infrastructure environments.
 
-Dependencies
-------------
+---
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+## 🚀 Features
 
-Example Playbook
-----------------
+* MySQL installation
+* Database service configuration
+* Infrastructure automation ready
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+---
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+## 🧰 Requirements
 
-License
--------
+* Ansible >= 2.9
+* Linux server
 
-BSD
+---
 
-Author Information
-------------------
+## ⚙️ Role Variables
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Example variables:
+
+```yaml
+mysql_root_password: root
+mysql_port: 3306
+```
+
+---
+
+## ▶️ Example Playbook
+
+```yaml
+- hosts: db_servers
+  become: true
+  roles:
+    - gustavoohrodrigues.mysql_server
+```
+
+---
+
+## 📦 Installation
+
+```bash
+ansible-galaxy install gustavoohrodrigues.mysql_server
+```
+
+---
+
+## Author
+
+**Gustavo Henrique Rodrigues**
+SysAdmin
+
+LinkedIn
+https://www.linkedin.com/in/gustavo-henrique-rodrigues-3070a5260
+
+---
+
+## 📜 License
+
+MIT
